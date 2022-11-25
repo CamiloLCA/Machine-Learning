@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: none;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 2fr calc(100vh - 150px - 30vh)    1fr 1fr;
+    grid-template-rows: 50px 70px 30px calc(100vh - 150px - 30vh) 20vh;
+}
+
+#main-poses{
+    background: url(../pictures/background-poses.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main-voice{
+    background: url(../pictures/background-voice.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main-images{
+    background: url(../pictures/background-images.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title{
+    position: static;
+    text-align: center;
+    height: 10vh;
+    font-size: clamp(16px, 4vw, 22px);
+    line-height: calc(10vh / 1.2);
+    color: #ddd;
+}
+
+#title-images{
+    background: radial-gradient(rgb(10, 105, 78), rgb(6, 65, 67), rgb(5, 56, 47));
+}
+
+#title-poses{
+    background: radial-gradient(rgb(47, 38, 113), rgb(12, 14, 107) 60%);
+}
+
+#title-voice{
+    background: radial-gradient(rgb(10, 94, 105), rgb(6, 65, 67), rgb(2, 28, 32));
+}
+
+.title-container{
+    margin: 0;
+}
+
+.button-title{
+    grid-column: 2/3;
+    grid-row: 2;
+    margin: 0 15%;
+    border: none;
+    background: rgb(0, 2, 123);
+    border-bottom: 6px solid rgb(0, 51, 255);
+    border-right: 6px solid rgb(0, 30, 148);
+    color: #ddd;
+}
+
+.button-title:hover{
+    background: rgba(0, 2, 123, 0.845);
+}
+
+#button-voice{
+    background: rgb(1, 39, 59);
+    border-bottom: 6px solid rgb(8, 68, 103);
+    border-right: 6px solid rgb(6, 46, 70);
+}
+
+#button-voice:hover{
+    background: rgb(2, 57, 87);
+}
+
+#button-image{
+    background: rgb(1, 58, 59);
+    border-bottom: 6px solid rgb(8, 103, 68);
+    border-right: 6px solid rgb(6, 70, 53);
+}
+
+#button-image:hover{
+    background: rgb(1, 85, 70);    
+}
+
+.canvas-container{
+    grid-column: 2/3;
+    grid-row: 4;
+    border: 6px solid rgb(0, 51, 255);
+    margin: 0 ;
+}
+
+#canvas, #webcam-container canvas{
+    width: 100%;
+    height: 100%;
+}
+
+#canvas-voice{
+    border: 6px solid rgb(2, 49, 60);
+    background: url(../pictures/neon-voice.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+#canvas-image{
+    border: 6px solid rgb(2, 71, 44);
+}
+
+#label-container{
+    text-align: center;
+    grid-row: 4;
+    font-size: 2em;
+    color: #ddd;
+}
