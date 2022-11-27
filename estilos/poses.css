@@ -7,7 +7,7 @@
 
 .main{
     display: grid;
-    grid-template-columns: 2fr calc(100vh - 150px - 30vh)    1fr 1fr;
+    grid-template-columns: 2fr calc(100vh - 150px - 30vh) 1fr 1fr;
     grid-template-rows: 50px 70px 30px calc(100vh - 150px - 30vh) 20vh;
 }
 
@@ -39,7 +39,7 @@
 }
 
 #title-images{
-    background: radial-gradient(rgb(10, 105, 78), rgb(6, 65, 67), rgb(5, 56, 47));
+    background: radial-gradient(rgb(10 83 105), rgb(6 36 67), rgb(5 19 56));
 }
 
 #title-poses{
@@ -80,9 +80,9 @@
 }
 
 #button-image{
-    background: rgb(1, 58, 59);
-    border-bottom: 6px solid rgb(8, 103, 68);
-    border-right: 6px solid rgb(6, 70, 53);
+    background: rgb(1 10 59);
+    border-bottom: 6px solid rgb(8, 33, 103);
+    border-right: 6px solid rgb(12, 6, 70);
 }
 
 #button-image:hover{
@@ -110,7 +110,7 @@
 }
 
 #canvas-image{
-    border: 6px solid rgb(2, 71, 44);
+    border: 6px solid rgb(4 11 120);
 }
 
 #label-container{
@@ -118,4 +118,26 @@
     grid-row: 4;
     font-size: 2em;
     color: #ddd;
+}
+
+.back-button{
+    width: 50px;
+    height: 70px;
+    background-color: rgb(0, 2, 123);
+    right: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.back-button--color-green{
+    background-color: rgb(10 77 105);
+}
+
+.back-button--color-cyan{
+    background-color: rgb(10, 81, 119);
+}
+
+.lista--grid{
+    grid-column: 1 / 3;
+    grid-row: 5 / 8;
 }

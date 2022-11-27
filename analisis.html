@@ -9,51 +9,72 @@
     <link rel="stylesheet" href="estilos/analisis.css">
   </head>
   <body>
-    <h1 id="title">Analisis red neuronal</h1>
-    <div class="teachable-machine">
-      <h2>Teachable Machine</h2>
-      <p>
-        La página básicamente nos dice que entrenamos una computadora para reconocer imágenes, sonidos y poses, sin la necesidad de escribir código de Machine Learning, y podemos usar nuestro modelo en nuestros propios proyectos, más a fondo. 
-      </p>
-      <p>
-        Descubrimos que Teachable Machine usa tensorflow.js, la cual es una librería de Machine Learning en Javascript utilizada para entrenar y correr los modelos que hacemos en nuestro navegador: 
-      </p>
-      <ul>
-        <li>Esta librería corre modelos existentes creados en Javascript o modelos de Tensorflow convertidos a python en el navegador o bajo node.js</li>
-        <li>Re-entrena modelos existentes usando nuestros propios datos.</li>
-        <li>Teachable Machine usa una técnica llamada Transfer Learning o aprendizaje por transferencia, donde hay una red neuronal pre-entrenada, esta técnica se centra en almacenar el conocimiento adquirido al resolver un problema.</li>
-        <li>Básicamente, aplicar el conocimiento adquirido en un problema diferente pero relacionado, y cuando creamos nuestras propias clases podemos tomarlo como si estas se convierten en la última capa o paso de la red neuronal.</li>
-        <li>Específicamente, las imágenes y los modelos de poses son aprendidos de una red móvil de modelos pre-entrenado y el modelo de sonido está basado en Speech Command Recognizer o Reconocedor de comandos de voz.</li>
-      </ul>
-      <p>Teachable Machine tuvo una versión original en 2017 y la actual presenta unos cuantos cambios respecto a esta:</p>
-      <ul>
-        <li>En la original solo era posible entrenar 3 clases mientras que en la actualizada podemos añadir tantas como queramos.</li>
-        <li>Se pueden guardar nuestros proyectos en Google drive, para de esta manera poder continuar trabajando después.</li>
-        <li>Es posible entrenar un modelo con sonidos y detección de poses, no solamente imágenes.</li>
-        <li>No podemos mostrar gifs o reproducir sonidos con el modelo en la herramienta como tal, en cambio podemos exportar nuestros modelos para usarlo en todo tipo de experiencias.</li>
-      </ul>
-      <p>Según la página usar una u otra versión depende de lo que deseemos hacer, si solo queremos realizar una demo rápida de cómo funciona el Machine Learning sin querer guardar nada, la versión de 2017 es perfecta para ello pero para guardar un modelo y crear un proyecto funcional es necesario usar la última versión.
-      </p>
-      <h3>Parámetros de la maquina</h3>
-      <ul>
-        <li>EPOCAS: Numero de veces que el algoritmo recorre todo el conjunto de datos. Es decir, una maquina con más épocas es más efectiva debido a que recorre los datos un mayor numero de veces y por ende tiene mas probabilidades de un reconocimiento correcto. En cambio, en un modelo con una poca cantidad de épocas tiende a fallar con mas frecuencia debido a la falta de entrenamiento y preparación.</li>
-        <li>TAMAÑO DEL LOTE: Agrupa todo el conjunto de datos de forma equitativa para recorrer toda la información de manera grupal y más eficaz. Esto es muy útil cuando la cantidad de datos es inmensa o una gran cantidad de épocas. Esto también ayuda a una mayor velocidad para la preparación del modelo.
-        El tamaño de cada lote debe ser grande si la cantidad de datos o épocas lo es también. En caso contrario, los lotes y la agrupación de los datos no tendrán ninguna utilidad. Por ende, el tamaño del lote esta predeterminando por la cantidad de épocas y datos.
-        </li>
-        <li>TASA DE APRENDIZAJE: La rapidez con la que la maquina reconoce y remplaza los conceptos aprendidos. Es decir, con una mayor tasa de aprendizaje el modelo reconoce los datos nuevos con mas facilidad, pero tiene a olvidar algunos elementos que aprendió en el pasado. Este elemento es útil cuando no se le han hecho muchos cambios al conjunto de datos, por lo que es poco posible que se pierda algo importante.
-          En otras palabras, si la tasa llega a ser muy baja, su tiempo de procesamiento es gigante, aunque puede llegar a ser preciso. Por otro lado, una tasa muy alta a pesar de que no tarde nada en prepararse, fracasara en el proceso de reconocimiento y predicción.
+    <div class="presentation">
+      <h1 id="title">Analisis red neuronal</li></h1>
+      <a href="index.html" class="back-button"></a>
+      <span class="title_circle-radius title_teachable-machine" id="teachable-machine">TEACHABLE MACHINE</span>
+      <span class="title_circle-radius title_neuronal-meaning" id="redes--meaning">REDES NEURONALES</span>
+      <span class="title_circle-radius title_neuronal-use" id="redes--use">USO DE LAS REDES</span>
+      <span class="title_circle-radius title_neuronal-aplication" id="redes--aplication">APLICACION DE LAS REDES</span>
+      <span class="title_circle-radius title_neuronal-function" id="redes--function">FUNCIONES DE LAS REDES</span>
+      <span class="title_circle-radius title_neuronal-arquitecture" id="redes--arquitecture">ARQUITECTURA DE LAS REDES</span>
+    </div>
+    <div class="sexo">
+      
+    <div class="teachable-machine page" id="teachable-machine--page">
+      <div class="back-page" id="back-page"></div>
+      <div class="background--red">
+        <h2 class="title--center">Teachable Machine</h2>
+        <br>
+        <p>
+          La página básicamente nos dice que entrenamos una computadora para reconocer imágenes, sonidos y poses, sin la necesidad de escribir código de Machine Learning, y podemos usar nuestro modelo en nuestros propios proyectos, más a fondo. 
+        </p>
+        <p><br>
+          Descubrimos que Teachable Machine usa tensorflow.js, la cual es una librería de Machine Learning en Javascript utilizada para entrenar y correr los modelos que hacemos en nuestro navegador: 
+        </p><br>
+        <ul>
+          <li>Esta librería corre modelos existentes creados en Javascript o modelos de Tensorflow convertidos a python en el navegador o bajo node.js</li>
+          <li>Re-entrena modelos existentes usando nuestros propios datos.</li>
+          <li>Teachable Machine usa una técnica llamada Transfer Learning o aprendizaje por transferencia, donde hay una red neuronal pre-entrenada, esta técnica se centra en almacenar el conocimiento adquirido al resolver un problema.</li>
+          <li>Básicamente, aplicar el conocimiento adquirido en un problema diferente pero relacionado, y cuando creamos nuestras propias clases podemos tomarlo como si estas se convierten en la última capa o paso de la red neuronal.</li>
+          <li>Específicamente, las imágenes y los modelos de poses son aprendidos de una red móvil de modelos pre-entrenado y el modelo de sonido está basado en Speech Command Recognizer o Reconocedor de comandos de voz.</li>
+        </ul><br>
+        <p>Teachable Machine tuvo una versión original en 2017 y la actual presenta unos cuantos cambios respecto a esta:</p>
+        <ul>
+          <li>En la original solo era posible entrenar 3 clases mientras que en la actualizada podemos añadir tantas como queramos.</li>
+          <li>Se pueden guardar nuestros proyectos en Google drive, para de esta manera poder continuar trabajando después.</li>
+          <li>Es posible entrenar un modelo con sonidos y detección de poses, no solamente imágenes.</li>
+          <li>No podemos mostrar gifs o reproducir sonidos con el modelo en la herramienta como tal, en cambio podemos exportar nuestros modelos para usarlo en todo tipo de experiencias.</li>
+        </ul><br>
+        <p>Según la página usar una u otra versión depende de lo que deseemos hacer, si solo queremos realizar una demo rápida de cómo funciona el Machine Learning sin querer guardar nada, la versión de 2017 es perfecta para ello pero para guardar un modelo y crear un proyecto funcional es necesario usar la última versión.
+        </p><br>
+        <h3>Parámetros de la maquina</h3><br>
+        <ul>
+          <li>EPOCAS: Numero de veces que el algoritmo recorre todo el conjunto de datos. Es decir, una maquina con más épocas es más efectiva debido a que recorre los datos un mayor numero de veces y por ende tiene mas probabilidades de un reconocimiento correcto. En cambio, en un modelo con una poca cantidad de épocas tiende a fallar con mas frecuencia debido a la falta de entrenamiento y preparación.</li>
+          <li>TAMAÑO DEL LOTE: Agrupa todo el conjunto de datos de forma equitativa para recorrer toda la información de manera grupal y más eficaz. Esto es muy útil cuando la cantidad de datos es inmensa o una gran cantidad de épocas. Esto también ayuda a una mayor velocidad para la preparación del modelo.
+          El tamaño de cada lote debe ser grande si la cantidad de datos o épocas lo es también. En caso contrario, los lotes y la agrupación de los datos no tendrán ninguna utilidad. Por ende, el tamaño del lote esta predeterminando por la cantidad de épocas y datos.
           </li>
-      </ul>
+          <li>TASA DE APRENDIZAJE: La rapidez con la que la maquina reconoce y remplaza los conceptos aprendidos. Es decir, con una mayor tasa de aprendizaje el modelo reconoce los datos nuevos con mas facilidad, pero tiene a olvidar algunos elementos que aprendió en el pasado. Este elemento es útil cuando no se le han hecho muchos cambios al conjunto de datos, por lo que es poco posible que se pierda algo importante.
+            En otras palabras, si la tasa llega a ser muy baja, su tiempo de procesamiento es gigante, aunque puede llegar a ser preciso. Por otro lado, una tasa muy alta a pesar de que no tarde nada en prepararse, fracasara en el proceso de reconocimiento y predicción.
+          </li>
+          <br>
+        </ul>
+      </div>
     </div>
     
-    <div class="red-neuronal-significado">
-      <h2>Redes Neuronales</h2>
+    <div class="red-neuronal-significado page" id="red-neuronal--page">
+      <div class="back-page" id="back-page--red-meaning"></div>
+      <div class="background--red">
+      <h2 class="title--center">Redes Neuronales</h2><br>
       <p>El termino red neuronal se aplica a una famila de modelos relacionada, de manera aproximada que se caracteriza por un gran espacio de parámetro y una estructura flexible y que proviene de los estudios sobre el funcionamiento del cerebro, es un metodo de la inteligencia artificial que enseña a las computadoreas a procesar datos de una manera que esta inspirada en la forma en que lo hace el cerebro humano. es un tipo de proceso de machine learning llamado aprendizaje profundo, que utiliza los nodos o las neuronas interconectados en una estructura de capas que se parece al cerebro humano</p>
     </div>
-    <div class="red-neuronal-uso">
-      <h3>¿Para que se utilizan las redes neuronales?</h3>
-      <p>Las redes neuronales están presentes en varios casos de uso en muchos sectores como pueden ser:</p>
-      <ul >
+    </div>
+    <div class="red-neuronal-uso page" id="red-neuronal-use--page">
+      <div class="back-page" id="back-page--red-use"></div>
+      <div class="background--red">
+      <h2 class="title--center">¿Para que se utilizan las redes neuronales?</h2><br>  
+      <p>Las redes neuronales están presentes en varios casos de uso en muchos sectores como pueden ser:</p><br>
+      <ul>
         <li>Diagnóstico médico mediante la clasificación de imágenes médicas</li>
         <li>Marketing orientado mediante el filtrado de redes sociales y el análisis de datos de comportamiento</li>
         <li>predicciones financieras mediante el procesamiento de datos históricos de instrumentos financieros</li>
@@ -62,35 +83,49 @@
         <li>Identificación de compuestos químicos</li>
       </ul>
     </div>
-    <div class="red-neuronal-aplicaciones">
-      <p>Algunas de las aplicaciones más importantes de las redes neuronales son:</p>
+    </div>
+    <div class="red-neuronal-aplicaciones page" id="red-neuronal-aplicaction--page">
+      <div class="back-page" id="back-page--red-aplication"></div>
+      <div class="background--red">
+      <h3 class="title--center">Aplicacion de las redes</h3><br>
+      <p>Algunas de las aplicaciones más importantes de las redes neuronales son:</p><br>
       <ul>
         <li>Visión artificial</li>
         <li>Reconocimiento de voz</li>
         <li>Procesamiento de lenguaje natural</li>
         <li>Motores de recomendaciones</li>
       </ul>
+      </div>
     </div>
-    <div class="red-neuronal-funcion">
-      <h3>¿Cómo funcionan las redes neuronales?</h3><br>
-      <p>El cerebro humano es lo que inspira la arquitectura de las redes neuronales. Las células del cerebro humano, llamadas neuronas, forman una red compleja y con un alto nivel de interconexión y se envían señales eléctricas entre sí para ayudar a los humanos a procesar la información. De manera similar, una red neuronal artificial está formada por neuronas artificiales que trabajan juntas para resolver un problema. Las neuronas artificiales son módulos de software, llamados nodos, y las redes neuronales artificiales son programas de software o algoritmos que, en esencia, utilizan sistemas informáticos para resolver cálculos matemáticos.</p>  
+    <div class="red-neuronal-funcion page" id="red-neuronal-function--page">
+      <div class="back-page" id="back-page--red-function"></div>
+      <div class="background--red">
+        <h3 class="title--center">¿Cómo funcionan las redes neuronales?</h3><br>
+        <p>El cerebro humano es lo que inspira la arquitectura de las redes neuronales. Las células del cerebro humano, llamadas neuronas, forman una red compleja y con un alto nivel de interconexión y se envían señales eléctricas entre sí para ayudar a los humanos a procesar la información. De manera similar, una red neuronal artificial está formada por neuronas artificiales que trabajan juntas para resolver un problema. Las neuronas artificiales son módulos de software, llamados nodos, y las redes neuronales artificiales son programas de software o algoritmos que, en esencia, utilizan sistemas informáticos para resolver cálculos matemáticos.</p>  
+      </div>
     </div>
-    <div class="red-neuronal-arquitectura">
-      <h3>Arquitectura de una red neuronal simple</h3>
-      <p>Una red neuronal básica tiene neuronas artificiales interconectadas en tres capas:</p>
-      <ul>
-        <li>Capa de entreada: donde la información del mundo exterior entra en la red neuronal, Los nodos de entrada procesan los datos, los analizan o los clasifican y los pasan a la siguiente capa.</li>
-        <li>Capa oculta: Estas toman su entrada de la capa de entrada o de otras capas ocultas. Las redes neuronales artificiales pueden tener una gran cantidad de capas ocultas. Cada capa oculta analiza la salida de la capa anterior, la procesa aún más y la pasa a la siguiente capa.</li>
-        <li>Capa de salida: proporciona el resultado final de todo el procesamiento de datos que realiza la red neuronal artificial. Puede tener uno o varios nodos. Por ejemplo, si tenemos un problema de clasificación binaria (sí/no), la capa de salida tendrá un nodo de salida que dará como resultado 1 o 0. Sin embargo, si tenemos un problema de clasificación multiclase, la capa de salida puede estar formada por más de un nodo de salida.</li>
-      </ul>
+    <div class="red-neuronal-arquitectura page" id="red-neuronal-arquitecture--page">
+      <div class="back-page" id="back-page--red-arquitecture"></div>
+      <div class="background--red">
+        <h3 class="title--center">Arquitectura de una red neuronal simple</h3>
+        <br>
+        <p>Una red neuronal básica tiene neuronas artificiales interconectadas en tres capas:</p><br>
+        <ul>
+          <li>Capa de entreada: donde la información del mundo exterior entra en la red neuronal, Los nodos de entrada procesan los datos, los analizan o los clasifican y los pasan a la siguiente capa.</li>
+          <li>Capa oculta: Estas toman su entrada de la capa de entrada o de otras capas ocultas. Las redes neuronales artificiales pueden tener una gran cantidad de capas ocultas. Cada capa oculta analiza la salida de la capa anterior, la procesa aún más y la pasa a la siguiente capa.</li>
+          <li>Capa de salida: proporciona el resultado final de todo el procesamiento de datos que realiza la red neuronal artificial. Puede tener uno o varios nodos. Por ejemplo, si tenemos un problema de clasificación binaria (sí/no), la capa de salida tendrá un nodo de salida que dará como resultado 1 o 0. Sin embargo, si tenemos un problema de clasificación multiclase, la capa de salida puede estar formada por más de un nodo de salida.</li>
+        </ul>
+      </div>
     </div>
-    <div class="bibliografia">
+  </div>
+    <!-- <div class="bibliografia">
       <h2>Bibliografia</h2>
-      <ul class="bibliografia-list">
+      <ul class="bibliografia-list page">
         <li><a href="https://teachablemachine.withgoogle.com/faq">TeachablemMachine</a></li>
         <li><a href="https://www.ibm.com/docs/es/spss-statistics/saas?topic=networks-what-is-neural-network">IMB</a></li>
         <li><a href="https://aws.amazon.com/es/what-is/neural-network/">aws:Amazon</a></li>
       </ul>
-    </div>
+    </div> -->
+    <script src="scripts/analisis.js"></script>
   </body>
 </html>
