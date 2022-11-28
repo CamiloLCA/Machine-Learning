@@ -246,3 +246,8 @@ body{
     border-bottom: 4px dashed rgb(78, 78, 78);
     cursor: pointer;
 }
+
+.back-page:hover{
+    height: 100px;
+    transition: height 1s;
+}
